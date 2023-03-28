@@ -1,0 +1,175 @@
+:root{
+    --background-color:#ADD8E6;
+    --box-color:#ffffff;
+    --border-color:#222222;
+    --add-color:#7aeb7a;
+    --reduce-color:#FF0000;
+    --transaction-button:#4d4dff;
+    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+hr {
+    height:4.56rem;
+}
+
+
+.container {
+    width: 300px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.35rem;
+    margin: 0;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.balance {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+h3 {
+    padding-bottom: 10px;
+    margin: 40px 0 10px;
+}
+
+
+.inc-exp-container {
+    background-color:var(--box-color);
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    border-radius: 10px;
+    flex-direction: row;
+}
+
+
+.money {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+
+.money.add{
+    color: var(--add-color);
+}
+
+.money.reduce{
+    color: var(--reduce-color);
+}
+
+
+label {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: var(--transaction-button);
+    color: #ffffff;
+    box-shadow: var(--box-shadow);
+    border: 0;
+    font-size: 16px;
+    margin: 20px 0 30px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color:#3333ff;
+}
+
+
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.list li {
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+.list li.add {
+    border-left: 5px solid var(--add-color);
+}
+
+.list li.reduce {
+    border-left: 5px solid var(--reduce-color);
+}
+
+.delete-btn {
+    cursor: pointer;
+    background-color: var(--reduce-color);
+    box-shadow: var(--box-shadow);
+    border: 0;
+    font-size: 22px;
+    line-height: 22px;
+    padding: 10px;
+    margin: 10px 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(100%, -73%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+input[type="text"],
+input[type="number"] {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
